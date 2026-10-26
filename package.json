@@ -1,0 +1,27 @@
+{
+  "name": "computer-graphics",
+  "version": "1.0.0",
+  "description": "Lab commits for Computer Graphics",
+  "main": "index.js",
+  "scripts": {
+  "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/em28765-cmd/Computer-Graphics.git"
+  },
+  "keywords": [], 
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/em28765-cmd/Computer-Graphics/issues"
+  },
+  "homepage": "https://github.com/em28765-cmd/Computer-Graphics#readme",
+  "dependencies": {
+    "three": "^0.186.1"
+  },    
+  "devDependencies": {
+    "vite": "^8.3.2"
+  }
+}
