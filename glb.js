@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { GLTFLoader } from 'three/addons/loaders/GLTFloader.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xcccccc);
@@ -28,6 +28,16 @@ const loader = new GLTFLoader();
 loader.load('public/modeli.glb', (gltf) => {
     gltf.scene.rotation.y = Math.PI
     scene.add(gltf.scene);
+
+    // to do: te shfaqen te gjitha Meshes qe jan perdorur te modeli.glb, ne consolelog
+    let count = 0
+    gltf.scene.traverse((child) => {
+        if (child.isMesh) {
+            count++
+            console.log(child.name, child)
+        }
+    })
+    console.log('Meshes gjithsej:', count)
 })
 
 function animate() {
